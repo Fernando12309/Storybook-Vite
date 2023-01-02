@@ -1,15 +1,12 @@
 
 @tailwind base;
 @tailwind components;
-
-
 @tailwind utilities;
 
 @layer components{
     .btn{
         @apply inline-block px-5 py-3 rounded-xl
-        inline-block px-5 py-3 rounded-xl text-white 
-        uppercase tracking-wider font-semibold 
+         text-white uppercase tracking-wider font-semibold 
         text-sm sm:text-base hover:-translate-y-0.5 
         transform transition focus:outline-none 
         focus:ring focus:ring-offset-2 
