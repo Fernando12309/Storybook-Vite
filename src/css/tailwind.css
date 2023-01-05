@@ -23,5 +23,14 @@
         bg-blue-600 hover:bg-blue-400
         sm:hover:bg-blue-800  
         focus:ring-blue-600 active:bg-blue-700;
-        }
+    }
+    .emotecard{
+    @apply 
+    flex items-center overflow-hidden
+     bg-teal-300 rounded-lg shadow-lg
+    }
+    .emote-image{
+    @apply 
+    flex-shrink-0 w-32 h-32
+    }
 }

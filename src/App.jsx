@@ -23,8 +23,8 @@ export default function App(){
                             I enjoy playing a lot of multiplayer games with my friend or the community but I also do enjoy single player games. I am trying to build a community where everyone is welcome.
                         </p>
                         <div className="mt-4 space-x-1 sm:mt-6">
-                            <a className="shadow-lg btn btn-primary" href="https://www.twitch.tv/lorddeezy_">Watch Now</a>
-                            <a className="btn btn-secondary " href="https://discord.gg/pvHsCzty">Join Discord</a>
+                            <button className="btn btn-primary" href="https://www.twitch.tv/lorddeezy_">Watch Now</button>
+                            <button className="btn btn-secondary " href="https://discord.gg/pvHsCzty">Join Discord</button>
 
                         </div>
                     </div>
