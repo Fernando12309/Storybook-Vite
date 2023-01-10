@@ -1,7 +1,8 @@
 import React from "react";
-import twitchEmotes from "./data/twitchEmotes";
+import Emotes from "./data/twitchEmotes";
 import EmoteCard from "./components/EmoteCard";
 import "./css/tailwind.css";
+import { Button, ButtonLink } from "./components/Button";
 
 export default function App(){
     return (
@@ -23,8 +24,12 @@ export default function App(){
                             I enjoy playing a lot of multiplayer games with my friend or the community but I also do enjoy single player games. I am trying to build a community where everyone is welcome.
                         </p>
                         <div className="mt-4 space-x-1 sm:mt-6">
-                            <button className="btn btn-primary" href="https://www.twitch.tv/lorddeezy_">Watch Now</button>
-                            <button className="btn btn-secondary " href="https://discord.gg/pvHsCzty">Join Discord</button>
+                            <Button color="purple" href="https://www.twitch.tv/lorddeezy_">
+                                Watch Now
+                            </Button>
+                            <Button variant='solid' color='blue' href="https://discord.gg/pvHsCzty">
+                                Join Discord
+                            </Button>
 
                         </div>
                     </div>
@@ -42,8 +47,8 @@ export default function App(){
                 <h2 className="text-2xl font-extrabold text-gray-900">Lord Deezy's Emotes</h2>
                 <p className="mt-2 font-semibold text-gray-700">Subcribe to his twitch channel to gain access to these cool Emotes!</p>
                 <div className="grid gap-6 mt-6 lg:grid-cols-2 xl:grid-cols-3">
-                {twitchEmotes.map((emote) => (
-                    <EmoteCard emote={emote} key={emote.emoteName} />
+                {Emotes.map((emote) => (
+                    <EmoteCard {...emote}  />
                 ))}
                 </div>
             </div>

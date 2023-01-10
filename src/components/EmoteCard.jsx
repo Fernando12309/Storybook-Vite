@@ -1,7 +1,58 @@
 import React from "react";
-import PropTypes from 'prop-types';
+
 import '../css/tailwind.css';
 
+//updated fuction with object deconstruction in App.jsx
+export default function EmoteCard({ unlocked, emoteName, imageAlt, imageUrl, backgroundColor, color }) {
+  return (
+    <div className={"emotecard"}
+    style={backgroundColor && {backgroundColor}}>
+      <img className="emote-image"  
+      src={imageUrl} 
+      alt={imageAlt} 
+      />
+      <div className="px-6 py-4">
+        <h3 className="text-xl font-semibold text-gray-800"
+        style={color && {color}}>{emoteName}</h3>
+
+        <p className="text-lg text-gray-600"
+        style={color && {color}}>
+          {unlocked} </p>
+        
+      </div>
+    </div>
+  );
+};
+
+// export const emoteCard = ({unlocked, emoteName, color, backgroundColor, imageAlt, imageUrl}) => {
+//   return (
+//     <div className={"emotecard"}
+//     style={backgroundColor && {backgroundColor}}>
+//       <img
+//       className={"emote-image"}
+//        src={imageUrl}
+//        alt={imageAlt}/>
+//       <div className="px-6 py-4">
+//         <h3 className="text-xl font-semibold text-gray-800"
+//         style={color && {color}}>
+//           {emoteName}
+//           </h3>
+
+//         <p className="text-lg text-gray-600">{unlocked} </p>
+        
+//       </div>
+//     </div>
+//   );
+// };
+
+// emoteCard.proptypes = {
+//   imagePath: PropTypes.string.isRequired,
+//   altImage: PropTypes.string.isRequired,
+//   emoteName: PropTypes.string.isRequired,
+//   unlocked: PropTypes.string.isRequired,
+// };
+
+/* Original EmoteCard 
 export default function EmoteCard({ emote }) {
   return (
     <div className={"emotecard"}>
@@ -16,33 +67,4 @@ export default function EmoteCard({ emote }) {
       </div>
     </div>
   );
-};
-
-export const emoteCard = ({label1, label2, color, backgroundColor, imagePath, altImage}) => {
-  return (
-    <div className={"emotecard"}
-    style={backgroundColor && {backgroundColor}}>
-      <img
-      className={"emote-image"}
-       src={imagePath}
-       alt={altImage}/>
-      <div className="px-6 py-4">
-        <h3 className="text-xl font-semibold text-gray-800"
-        style={color && {color}}>
-          {label1}
-          </h3>
-
-        <p className="text-lg text-gray-600">{label2} </p>
-        
-      </div>
-    </div>
-  );
-};
-
-emoteCard.proptypes = {
-  imagePath: PropTypes.string.isRequired,
-  altImage: PropTypes.string.isRequired,
-  label1: PropTypes.string.isRequired,
-  label2: PropTypes.string.isRequired,
-};
-
+}; */

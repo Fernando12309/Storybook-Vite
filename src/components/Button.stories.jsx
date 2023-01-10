@@ -5,18 +5,27 @@ export default{
     component: Button,
     argTypes: {
         backgroundColor: { control: 'color' },
+        color: {control: 'color'},
     },
 };
 
 export const Primary = {
     args: {
       primary: true,
-      label: 'Button',
+      label: 'Watch Now',
     },
   };
-  
+   
   export const Secondary = {
     args: {
-      label: 'Secondary',
+      secondary: true,
+      label: 'Join Discord',
+    },
+  };
+
+  export const Third = {
+    args: {
+      third: true,
+      label: 'Gradient style',
     },
   };

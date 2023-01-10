@@ -1,4 +1,4 @@
-export default [
+let Emotes = [
     {
         emoteName: "Game Over",
         unlocked: "Tier 1 Sub",
@@ -42,3 +42,5 @@ export default [
         imageAlt: "Damn you got smoked",
     },
 ];
+
+export default Emotes;
